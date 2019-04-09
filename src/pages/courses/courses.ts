@@ -102,6 +102,7 @@ program_name:any;
   /**
    * Enrollements courses page
    */
+  //Course audit data from database is pulled using this function
   enrollement(){
     this.username = this.navParams.get('username');
     this.program_name = this.navParams.get('program_name');
@@ -111,7 +112,7 @@ program_name:any;
     let options = new RequestOptions({
       headers: headers
     });
-
+    //assigns variables and pushes data using studentID variabl through API
     let data = {
     username: this.username,
     program_name: this.program_name
@@ -121,12 +122,12 @@ program_name:any;
       content: 'Processing please wait...',
     });
     loader.present().then(() => { 
-      this.http.post('http://127.0.0.1:8080/ionicphp/student_audit.php', data, options)
+      this.http.post('http://127.0.0.1:8080/ionicphp/student_audit.php', data, options)//API call responsible for query
         .map(res => res.json())
         .subscribe(res => {
           
           loader.dismiss()
-          this.items = res.server_response;
+          this.items = res.server_response;//assigns server response to items
           console.log(this.items); 
         });
     });

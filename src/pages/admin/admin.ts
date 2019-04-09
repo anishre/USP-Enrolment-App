@@ -15,6 +15,7 @@ import { ProgramCalenderPage } from '../program-calender/program-calender';
 
 /**
  * Ionic page
+ * Ionic Component
  */
 @IonicPage()
 @Component({

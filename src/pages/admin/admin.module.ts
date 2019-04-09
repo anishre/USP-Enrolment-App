@@ -14,3 +14,5 @@ import { AdminPage } from './admin';
   ],
 })
 export class AdminPageModule {}
+
+//declares and defines the AdminPadeModule

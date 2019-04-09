@@ -14,3 +14,4 @@ import { EnrollNowPage } from './enroll-now';
   ],
 })
 export class EnrollNowPageModule {}
+//Implements EnrollPage Module

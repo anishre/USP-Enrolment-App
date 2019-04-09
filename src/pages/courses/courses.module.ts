@@ -14,3 +14,5 @@ import { CoursesPage } from './courses';
   ],
 })
 export class CoursesPageModule {}
+
+//Implements CoursesPage Module
